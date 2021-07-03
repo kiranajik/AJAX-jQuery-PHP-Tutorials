@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <title>Ajax-1 Simple AJAX</title>
+    <script>
+        $(document).ready(function() {
+            $("#change").click(function() {
+                $("#text").load("new.txt", {
+                    name: "Kiran Ajikumar",
+                    age: "19"
+                }, function() {
+                    alert("Test will be Changed!!");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="text">
+        <p>This is the First Content!</p>
+    </div>
+    <button id="change">Change Text!</button>
+
+</body>
+
+</html>
